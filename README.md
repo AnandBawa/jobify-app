@@ -2,10 +2,10 @@ A complete Full-Stack App based on MERN stack built as part of John Smilga's MER
 
 https://www.udemy.com/course/mern-stack-course-mongodb-express-react-and-nodejs/
 
-First setup of the project (if no pnpm installed, will install pnpm first):
+First setup of the project (if no pnpm installed, will install pnpm first):  
 npm run setup-project
 
-pnpm run <command>:
+pnpm run "command":
 
 - "setup-project": "npm install -g pnpm && pnpm install && cd client && pnpm install"
 - "setup-production-app": "pnpm install && cd client && pnpm install && pnpm run build"
