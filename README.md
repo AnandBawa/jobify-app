@@ -7,8 +7,8 @@ npm run setup-project
 
 pnpm run "command":
 
-- "setup-project": "npm install -g pnpm && pnpm install && cd client && pnpm install"
-- "setup-production-app": "pnpm install && cd client && pnpm install && pnpm run build"
-- "server": "nodemon server.js"
-- "client": "cd client && pnpm run dev"
-- "dev": "concurrently --kill-others-on-fail \"pnpm run server\" \"pnpm run client\""
+- setup-project: "npm install -g pnpm && pnpm install && cd client && pnpm install"
+- setup-production-app: "pnpm install && cd client && pnpm install && pnpm run build"
+- server: "nodemon server.js"
+- client: "cd client && pnpm run dev"
+- dev: "concurrently --kill-others-on-fail \"pnpm run server\" \"pnpm run client\""
