@@ -1,9 +1,8 @@
-import { Link, Form, redirect } from "react-router-dom";
+import { Link, Form, redirect, useNavigate } from "react-router-dom";
 import { Logo, FormRow, SubmitBtn } from "../components";
 import Wrapper from "../assets/wrappers/RegisterAndLoginPage";
 import customFetch from "../utils/customFetch";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
 
 export const action = async ({ request }) => {
   const formData = await request.formData();
@@ -22,7 +21,9 @@ export const action = async ({ request }) => {
 const Login = () => {
   const navigate = useNavigate();
 
-  const loginDemoUser = async () => {
+  const loginDemoUser = async (e) => {
+    const btn = e.target;
+    btn.disabled = true;
     const data = {
       email: "test@test.com",
       password: "secret123",
@@ -45,7 +46,12 @@ const Login = () => {
         <FormRow type="email" name="email" />
         <FormRow type="password" name="password" />
         <SubmitBtn />
-        <button type="button" className="btn btn-block" onClick={loginDemoUser}>
+        <button
+          type="button"
+          className="btn btn-block"
+          onClick={(e) => loginDemoUser(e)}
+          disabled={false}
+        >
           Explore the App
         </button>
         <p>
